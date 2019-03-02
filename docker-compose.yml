@@ -21,6 +21,7 @@ services:
       - "9000:9000"
     volumes:
       - ./www/html/:/var/www/html/
+      - ./phpfpm/php.ini:/usr/local/etc/php/php.ini
     network_mode: bridge
   mysql:
     image: mariadb:10.2
